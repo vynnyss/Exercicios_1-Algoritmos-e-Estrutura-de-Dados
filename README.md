@@ -6,3 +6,4 @@ Integrantes do grupo:
 
 - Vinicius Sousa RA:2401090
 - Caio Felix RA:2401161
+- Luiz Felipe RA:2400228
