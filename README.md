@@ -4,4 +4,5 @@ Exercicios na pasta : exercicios/src/Main.java
 
 Integrantes do grupo:
 
-Vinicius Sousa RA:2401090
+- Vinicius Sousa RA:2401090
+- Caio Felix RA:2401161
