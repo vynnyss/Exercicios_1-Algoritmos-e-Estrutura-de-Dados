@@ -1,6 +1,7 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 import javax.swing.*;
+import java.util.Scanner;
 
 public class Main {
     public static void ex1(){
@@ -23,6 +24,55 @@ public class Main {
         JOptionPane.showMessageDialog(null,"A soma entre " + num1 + " e " + num2 + " é igual a " +(num1 + num2)+ ".");
     }
 
+    public static void ex5(){
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Digite NOTA 1");
+        double nota1 = sc.nextDouble();
+        System.out.println("Digite NOTA 2");
+        double nota2 = sc.nextDouble();
+        double media = (nota1 + nota2) / 2;        
+        System.out.println(" A média entre " + nota1 + " e " + nota2 + " é igual a " + media);
+        sc.close();
+    }
+
+    public static void ex6(){
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Digite um numero: ");
+        int num = sc.nextInt();
+        int antessesor = num - 1;
+        int sucessor = num + 1;
+        System.out.println("O antessesor de " + num + " é " + antessesor);
+        System.out.println("O sucessor de " + num + " é " + sucessor);
+        sc.close();
+
+    }
+
+    public static void ex7(){
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Digite um numero: ");
+        double num = sc.nextDouble();
+        double dobro = num + num;
+        double terca = num / 3;
+        System.out.println("O dobro é: " + dobro);
+        System.out.printf("A terça parte de %.1f é %.5f%n", num, terca);
+        sc.close();
+
+    }
+
+    public static void ex8(){
+        
+        Scanner sc = new Scanner(System.in);
+        System.out.println("DIGITE DISTÂNCIA EM KM");
+        double num = sc.nextDouble();
+        double cm = num * 100.000;
+        System.out.printf("Distancia de %.0f%n", cm);
+        sc.close();
+
+    }
+        
     public static void ex14() {
         float km, total;
         int dias;
@@ -67,7 +117,12 @@ public class Main {
         ex2();
         ex3();
         ex4();
+        ex5();
+        ex6();
+        ex7();
+        ex8();
 
+        
         ex14();
         ex15();
         ex16();
