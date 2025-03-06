@@ -8,3 +8,4 @@ Integrantes do grupo:
 - Caio Felix RA:2401161
 - Luiz Felipe RA:2400228
 - -Thiago Malta da SIlva ra: 2400048
+- Diego Fonseca de Oliveira RA: 1902388
