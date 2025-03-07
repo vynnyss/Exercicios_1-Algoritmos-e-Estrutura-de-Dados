@@ -33,7 +33,7 @@ public class Main {
         double nota2 = sc.nextDouble();
         double media = (nota1 + nota2) / 2;        
         System.out.println(" A média entre " + nota1 + " e " + nota2 + " é igual a " + media);
-        sc.close();
+
     }
 
     public static void ex6(){
@@ -45,12 +45,9 @@ public class Main {
         int sucessor = num + 1;
         System.out.println("O antessesor de " + num + " é " + antessesor);
         System.out.println("O sucessor de " + num + " é " + sucessor);
-        sc.close();
-
     }
 
     public static void ex7(){
-
         Scanner sc = new Scanner(System.in);
         System.out.println("Digite um numero: ");
         double num = sc.nextDouble();
@@ -58,8 +55,6 @@ public class Main {
         double terca = num / 3;
         System.out.println("O dobro é: " + dobro);
         System.out.printf("A terça parte de %.1f é %.5f%n", num, terca);
-        sc.close();
-
     }
 
     public static void ex8(){
@@ -69,80 +64,48 @@ public class Main {
         double num = sc.nextDouble();
         double cm = num * 100.000;
         System.out.printf("Distancia de %.0f%n", cm);
-        sc.close();
-
     }
 
     public static void ex9(){
-
-        import java.util.Scanner;
-
-public class Main {
-    public static void main(String[] args)
-    {
         System.out.println("Qual valor você possui em carteira? ");
         Scanner sc = new Scanner(System.in);
         double valor = sc.nextDouble();
         valor = valor/ 3.45;
-
         System.out.printf(" Você pode comprar: %.2f dólares", valor);
-
-        sc.close();
-
-        }
     }
 
-    public static void ex10(){
-        import java.util.Scanner;
-        public class Main {
-    public static void main(String[] args) {
+
+    public static void ex10() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Digite a altura em metros: ");
         double altura = sc.nextFloat();
         System.out.print("Digite a largura em metros: ");
         double largura = sc.nextDouble();
         double area = altura * largura;
-
         double tintanecessaria = area / 2;
-
         System.out.printf("A área da parede é de: %.2f metros quadrados.%n", area);
         System.out.printf("A quantidade de tinta necessária é: %.2f litros.%n", tintanecessaria);
-
-import java.util.Scanner;
-public class Ex11 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        
+    }
+    public static void ex11 (){
+        Scanner sc = new Scanner(System.in);
         System.out.println("Digite os valores de A, B e C:");
-        double a = scanner.nextDouble();
-        double b = scanner.nextDouble();
-        double c = scanner.nextDouble();
+        double a = sc.nextDouble();
+        double b = sc.nextDouble();
+        double c = sc.nextDouble();
         double delta = Math.pow(b, 2) - 4 * a * c;
         System.out.println("O valor de Delta é: " + delta);
-        
-        scanner.close();
     }
-}
 
-import java.util.Scanner;
-
-public class ex12 {
-    public static void main(String[] args) {
+    public static void ex12 (){
         Scanner scanner = new Scanner(System.in);
         
         System.out.println("Digite o preço do produto:");
         double preco = scanner.nextDouble();
         double precoPromocional = preco * 0.95;
         System.out.println("O preço promocional é: " + precoPromocional);
-        
-        scanner.close();
     }
-}
 
-        public static void ex13() {
-            import java.util.Scanner;
-            public class Main {
-                public static void main(String[] args) {
+    public static void ex13() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Digite o salário: ");
         double salario = sc.nextDouble();
@@ -150,7 +113,7 @@ public class ex12 {
         System.out.printf("O salário com 15%% de aumento é de: %.2f%n", aumento);
         sc.close();
     }
-    }
+
     public static void ex14() {
         float km, total;
         int dias;
@@ -199,8 +162,11 @@ public class ex12 {
         ex6();
         ex7();
         ex8();
-
-        
+        ex9();
+        ex10();
+        ex11();
+        ex12();
+        ex13();
         ex14();
         ex15();
         ex16();
