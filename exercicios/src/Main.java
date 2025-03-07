@@ -72,7 +72,54 @@ public class Main {
         sc.close();
 
     }
-        
+
+    public static void ex9(){
+
+        import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args)
+    {
+        System.out.println("Qual valor você possui em carteira? ");
+        Scanner sc = new Scanner(System.in);
+        double valor = sc.nextDouble();
+        valor = valor/ 3.45;
+
+        System.out.printf(" Você pode comprar: %.2f dólares", valor);
+
+        sc.close();
+
+        }
+    }
+
+    public static void ex10(){
+        import java.util.Scanner;
+        public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite a altura em metros: ");
+        double altura = sc.nextFloat();
+        System.out.print("Digite a largura em metros: ");
+        double largura = sc.nextDouble();
+        double area = altura * largura;
+
+        double tintanecessaria = area / 2;
+
+        System.out.printf("A área da parede é de: %.2f metros quadrados.%n", area);
+        System.out.printf("A quantidade de tinta necessária é: %.2f litros.%n", tintanecessaria);
+
+        public static void ex13() {
+            import java.util.Scanner;
+            public class Main {
+                public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite o salário: ");
+        double salario = sc.nextDouble();
+        double aumento = salario + (salario* 0.15);
+        System.out.printf("O salário com 15%% de aumento é de: %.2f%n", aumento);
+        sc.close();
+    }
+    }
     public static void ex14() {
         float km, total;
         int dias;
