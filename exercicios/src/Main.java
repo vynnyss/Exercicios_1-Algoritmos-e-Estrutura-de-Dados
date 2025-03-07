@@ -108,6 +108,37 @@ public class Main {
         System.out.printf("A área da parede é de: %.2f metros quadrados.%n", area);
         System.out.printf("A quantidade de tinta necessária é: %.2f litros.%n", tintanecessaria);
 
+import java.util.Scanner;
+public class Ex11 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Digite os valores de A, B e C:");
+        double a = scanner.nextDouble();
+        double b = scanner.nextDouble();
+        double c = scanner.nextDouble();
+        double delta = Math.pow(b, 2) - 4 * a * c;
+        System.out.println("O valor de Delta é: " + delta);
+        
+        scanner.close();
+    }
+}
+
+import java.util.Scanner;
+
+public class ex12 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Digite o preço do produto:");
+        double preco = scanner.nextDouble();
+        double precoPromocional = preco * 0.95;
+        System.out.println("O preço promocional é: " + precoPromocional);
+        
+        scanner.close();
+    }
+}
+
         public static void ex13() {
             import java.util.Scanner;
             public class Main {
