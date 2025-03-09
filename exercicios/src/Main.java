@@ -7,111 +7,114 @@ public class Main {
     public static void ex1(){
         JOptionPane.showMessageDialog(null,"Olá, Mundo!");
     };
+
     public static void ex2(){
+
         String nome = JOptionPane.showInputDialog("Qual é o seu nome?");
         JOptionPane.showMessageDialog(null,"Olá " + nome + ", é um prazer te conhecer!");
     }
     public static void ex3(){
-        String nome = JOptionPane.showInputDialog("Nome do(a) funcionário(a)");
-        Float salario = Float.parseFloat(JOptionPane.showInputDialog("Salário"));
-        JOptionPane.showMessageDialog(null,"O(A) funcionário(a) " + nome + " tem um salário de " + salario + " em junho.");
+
+        String nome = JOptionPane.showInputDialog("Nome do(a) funcionário(a):");
+        Float salario = Float.parseFloat(JOptionPane.showInputDialog("Salário:"));
+        JOptionPane.showMessageDialog(null,"O(A) funcionário(a) " + nome + " tem um salário de R$" + salario + " em junho.");
     }
 
     public static void ex4(){
 
-        Integer num1 = Integer.parseInt(JOptionPane.showInputDialog("Digite um valor:"));
-        Integer num2 = Integer.parseInt(JOptionPane.showInputDialog("Digite outro valor:"));
+        Integer num1 = Integer.parseInt(JOptionPane.showInputDialog("Digite um valor (inteiro):"));
+        Integer num2 = Integer.parseInt(JOptionPane.showInputDialog("Digite outro valor (inteiro):"));
         JOptionPane.showMessageDialog(null,"A soma entre " + num1 + " e " + num2 + " é igual a " +(num1 + num2)+ ".");
     }
 
     public static void ex5(){
 
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Digite NOTA 1");
-        double nota1 = sc.nextDouble();
-        System.out.println("Digite NOTA 2");
-        double nota2 = sc.nextDouble();
-        double media = (nota1 + nota2) / 2;        
-        System.out.println(" A média entre " + nota1 + " e " + nota2 + " é igual a " + media);
+        double nota1 = Double.parseDouble(JOptionPane.showInputDialog("Digite a primeira nota (double):"));
+        double nota2 = Double.parseDouble(JOptionPane.showInputDialog("Digite a segunda nota (double): "));
+        double media = (nota1 + nota2) / 2;
+        String valor_formatado = String.format("%.2f", media);
+        JOptionPane.showMessageDialog(null, "A média entre " + nota1 + " e " + nota2 + " é igual a " + valor_formatado + ".");
 
     }
 
     public static void ex6(){
 
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Digite um numero: ");
-        int num = sc.nextInt();
-        int antessesor = num - 1;
+        int num = Integer.parseInt(JOptionPane.showInputDialog("Digite um número (inteiro): "));
+        int antecessor = num - 1;
         int sucessor = num + 1;
-        System.out.println("O antessesor de " + num + " é " + antessesor);
-        System.out.println("O sucessor de " + num + " é " + sucessor);
+        JOptionPane.showMessageDialog(null, "O antecessor de " + num + " é " + antecessor + ".");
+        JOptionPane.showMessageDialog(null, "O sucessor de " + num + " é " + sucessor + ".");
     }
 
     public static void ex7(){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Digite um numero: ");
-        double num = sc.nextDouble();
+
+        double num = Double.parseDouble(JOptionPane.showInputDialog("Digite um número (double): "));
         double dobro = num + num;
         double terca = num / 3;
-        System.out.println("O dobro é: " + dobro);
-        System.out.printf("A terça parte de %.1f é %.5f%n", num, terca);
+        String valor_formatado = String.format("%.2f", terca);
+        JOptionPane.showMessageDialog(null, "O dobro de " + num + " é " + dobro + ".");
+        JOptionPane.showMessageDialog(null, "A terça parte de " + num + " é " + valor_formatado + ".");
     }
 
     public static void ex8(){
-        
-        Scanner sc = new Scanner(System.in);
-        System.out.println("DIGITE DISTÂNCIA EM KM");
-        double num = sc.nextDouble();
-        double cm = num * 100.000;
-        System.out.printf("Distancia de %.0f%n", cm);
+
+        double num = Double.parseDouble(JOptionPane.showInputDialog("Digite a distância em metros: "));
+        double mm = num * 1000;
+        double cm = num * 100;
+        double dm = num * 10;
+        double dam = num / 10;
+        double hm = num / 100;
+        double km = num / 1000;
+        String texto_medidas = "Distãncia em quilômetros: " + km + "\nDistãncia em hectômetros: " + hm + "\nDistãncia em decâmetros: " + dam +
+                "\nDistãncia em metros: " + num + "\nDistãncia em decímetros: " + dm + "\nDistãncia em centímetros: " + cm +
+                "\nDistãncia em milímetros: " + mm;
+        JOptionPane.showMessageDialog(null, texto_medidas);
     }
 
     public static void ex9(){
-        System.out.println("Qual valor você possui em carteira? ");
-        Scanner sc = new Scanner(System.in);
-        double valor = sc.nextDouble();
-        valor = valor/ 3.45;
-        System.out.printf(" Você pode comprar: %.2f dólares", valor);
+
+        double valor = Double.parseDouble(JOptionPane.showInputDialog("Qual valor você possui na carteira?"));
+        double dolares = valor / 3.45f;
+        String valor_formatado = String.format("%.2f", dolares);
+        JOptionPane.showMessageDialog(null, "Você pode comprar " + valor_formatado + " dólares.");
     }
 
 
     public static void ex10() {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Digite a altura em metros: ");
-        double altura = sc.nextFloat();
-        System.out.print("Digite a largura em metros: ");
-        double largura = sc.nextDouble();
+
+        double altura = Double.parseDouble(JOptionPane.showInputDialog("Digite a altura em metros: "));
+        double largura = Double.parseDouble(JOptionPane.showInputDialog("Digite a largura em metros: "));
         double area = altura * largura;
+        String area_formatada = String.format("%.2f", area);
         double tintanecessaria = area / 2;
-        System.out.printf("A área da parede é de: %.2f metros quadrados.%n", area);
-        System.out.printf("A quantidade de tinta necessária é: %.2f litros.%n", tintanecessaria);
+        String tinta_formatada = String.format("%.2f", tintanecessaria);
+        JOptionPane.showMessageDialog(null, "Área da parede: " + area_formatada + " metros quadrados.");
+        JOptionPane.showMessageDialog(null, "Quantidade de tinta necessária: " + tinta_formatada + " litros.");
     }
     public static void ex11 (){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Digite os valores de A, B e C:");
-        double a = sc.nextDouble();
-        double b = sc.nextDouble();
-        double c = sc.nextDouble();
+
+        JOptionPane.showMessageDialog(null, "Δ = B² - 4 x A x C");
+        double a = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor de A: "));
+        double b = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor de B: "));
+        double c = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor de C: "));
         double delta = Math.pow(b, 2) - 4 * a * c;
-        System.out.println("O valor de Delta é: " + delta);
+        String delta_formatado = String.format("%.2f", delta);
+        JOptionPane.showMessageDialog(null, "Δ = " + b + "² - 4 x " + a + " x " + c + " = " + delta_formatado);
     }
 
     public static void ex12 (){
-        Scanner scanner = new Scanner(System.in);
-        
-        System.out.println("Digite o preço do produto:");
-        double preco = scanner.nextDouble();
-        double precoPromocional = preco * 0.95;
-        System.out.println("O preço promocional é: " + precoPromocional);
+
+        double preco = Double.parseDouble(JOptionPane.showInputDialog("Digite o preço do produto: "));
+        double preco_promocional = preco * 0.95f;
+        String valor_formatado = String.format("%.2f", preco_promocional);
+        JOptionPane.showMessageDialog(null, "O preço promocional é: R$" + valor_formatado);
     }
 
     public static void ex13() {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Digite o salário: ");
-        double salario = sc.nextDouble();
-        double aumento = salario + (salario* 0.15);
-        System.out.printf("O salário com 15%% de aumento é de: %.2f%n", aumento);
-        sc.close();
+
+        double salario = Double.parseDouble(JOptionPane.showInputDialog("Digite o seu salário: "));
+        double aumento = salario + (salario * 0.15);
+        JOptionPane.showMessageDialog(null, "O seu novo salário com 15% de aumento: R$" + aumento);
     }
 
     public static void ex14() {
