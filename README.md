@@ -9,3 +9,4 @@ Integrantes do grupo:
 - Luiz Felipe RA: 2400228
 - Thiago Malta da SIlva RA: 2400048
 - Diego Fonseca de Oliveira RA: 1902388
+- Gabriel Vicente Aiala 2100253
